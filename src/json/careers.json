@@ -1,0 +1,14 @@
+[
+    {
+      "careerId": 1,
+      "name": "Software Engineering"
+    },
+    {
+      "careerId": 2,
+      "name": "Software Developer"
+    },
+    {
+      "careerId": 3,
+      "name": "Graphic Design"
+    }
+]

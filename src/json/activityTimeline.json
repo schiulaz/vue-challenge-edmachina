@@ -1,0 +1,50 @@
+[
+    {
+      "title": "Email Sent",
+      "user": "Gerardo Moyano",
+      "description": "Upselling email sent.",
+      "created": "2023-10-27T13:42:28.313Z",
+      "icon": "mail",
+      "link": "#"
+    },
+    {
+      "title": "Chat Meeting",
+      "user": "Prof. Jean Charleton",
+      "description": "Whatsapp chat meeting. ",
+      "created": "2023-10-27T13:42:28.313Z",
+      "icon": "chat",
+      "link": null
+    },
+    {
+      "title": "Email Sent",
+      "user": "Gerardo Moyano",
+      "description": "Upselling email sent. View Email",
+      "created": "2023-10-27T13:42:28.313Z",
+      "icon": "school",
+      "link":  null
+    },
+    {
+      "title": "Email Sent",
+      "user": "Gerardo Moyano",
+      "description": "Upselling email sent. View Email",
+      "created": "2023-10-27T13:42:28.313Z",
+      "icon": "call",
+      "link": null
+    },
+    {
+      "title": "Email Sent",
+      "user": "Gerardo Moyano",
+      "description": "Upselling email sent.",
+      "created": "2023-10-27T13:42:28.313Z",
+      "icon": null,
+      "link": null
+    },
+    {
+      "title": "Tag Added",
+      "user": "Gerardo Moyano",
+      "description": "Inactive, Control, Schollarship",
+      "created": "2023-10-27T13:42:28.313Z",
+      "icon": null,
+      "link":  null
+    }
+  ]

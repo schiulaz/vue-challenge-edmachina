@@ -1,0 +1,73 @@
+// app global css in SCSS form
+h1,h2,h3,h4,h5,h6{
+    margin: 0px 0px 0px 0px;
+}
+
+
+h1 {
+    font-size: 2.4em
+}
+h2 {
+    font-size: 2.1em
+}
+h3 {
+    font-size: 1.8em
+}
+h4 {
+    font-size: 1.5em
+}
+h5 {
+    font-size: 1.2em
+}
+h6 {
+    color: $ed-grey;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    margin: 0px 0px 10px 0px;
+}
+
+.q-field__native{
+    font-weight: 700;
+    font-size: 12px;
+    color: $ed-grey;
+    line-height: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.q-focus-helper {
+    opacity: 0.05;
+}
+
+.q-field--dense .q-field__label {
+    font-size: 12px;
+    top: 10px;
+    font-weight: 700;
+}
+
+
+
+
+
+.text-link {
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .text-link:hover {
+    opacity: 0.8;
+  }
+
+  .radius-4{
+    border-radius: 4px
+  }
+  
+  .radius-t6{
+    border-radius: 6px 6px 0px 0px;
+   
+  }
+
+

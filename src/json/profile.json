@@ -1,0 +1,55 @@
+{
+    "student": {
+      "profile": {
+        "email": "danielle_munchen@gmail.com",
+        "name": "Danielle ",
+        "lastname": "Munchen Schollengberg",
+        "status": "",
+        "id": "AYSI32392",
+        "phoneNumber": "+52 5522126164",
+        "country": "México",
+        "category": "Do Not Contact"
+      },
+      "about": {
+        "period": "2023 - 1",
+        "status": "Alumno Regular",
+        "college": "Aldebaran",
+        "admission": "Centro Pre",
+        "segment": null,
+        "segmetDetail": null
+      },
+      "riskDetail": [
+        {
+          "detail": "Matemática",
+          "risk": null,
+          "note": null
+        },
+        {
+          "detail": "Química",
+          "risk": null,
+          "note": null
+        },
+        {
+          "detail": "Programación",
+          "risk": null,
+          "note": null
+        },
+        {
+          "detail": "Comunicación",
+          "risk": null,
+          "note": null
+        }
+      ],
+      "careerDetail": {
+        "career": {
+          "careerId": "0398P",
+          "name": "Software Engineering"
+        },
+        "type": "Graduate",
+        "modality": "On-Campus",
+        "status": "Enrollment",
+        "studentId": "AYSI0123839",
+        "cohort": "A1 2023"
+      }
+    }
+  }
