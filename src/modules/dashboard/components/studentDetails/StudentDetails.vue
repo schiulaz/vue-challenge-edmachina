@@ -25,11 +25,11 @@
   <script setup>
 import { onMounted } from "vue";
 
-import StudentCardProfile from "src/modules/dashboard/components/studentDetails/Profile/StudentCardProfile.vue";
-import StudentCardAboutResume from "src/modules/dashboard/components/studentDetails/Profile/StudentCardAboutResume.vue";
-import StudentCardAbout from "src/modules/dashboard/components/studentDetails/Profile/StudentCardAbout.vue";
-import StudentCardCareerDetails from "src/modules/dashboard/components/studentDetails/Profile/StudentCardCareerDetails.vue";
-import WidgetsCard from "src/modules/dashboard/components/studentDetails/Profile/WidgetsCard.vue";
+import StudentCardProfile from "src/modules/dashboard/components/studentDetails/profile/StudentCardProfile.vue";
+import StudentCardAboutResume from "src/modules/dashboard/components/studentDetails/profile/StudentCardAboutResume.vue";
+import StudentCardAbout from "src/modules/dashboard/components/studentDetails/profile/StudentCardAbout.vue";
+import StudentCardCareerDetails from "src/modules/dashboard/components/studentDetails/profile/StudentCardCareerDetails.vue";
+import WidgetsCard from "src/modules/dashboard/components/studentDetails/profile/WidgetsCard.vue";
 
 const props = defineProps({
   data: {

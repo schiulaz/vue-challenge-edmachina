@@ -5,8 +5,8 @@
       <h6>Status: {{ data.about.status }}</h6>
       <h6>Colegio: {{ data.about.college }}</h6>
       <h6>Mod Admission: {{ data.about.admission }}</h6>
-      <h6>Segmento: {{ data.about.segment }}</h6>
-      <h6>Segmento Detalle: {{ data.about.segmentDetail }}</h6>
+      <h6>Segmento: {{ data.about.segment ? data.about.segment : "Sin Información" }}</h6>
+      <h6>Segmento Detalle: {{ data.about.segmentDetail ? data.about.segmentDetail : "Sin Información"}}</h6>
       <q-separator class="q-my-md" color="grey-2"></q-separator>
       <h5 class="card-title">Detalle Riesgo de Ingreso</h5>
       <div>

@@ -57,36 +57,7 @@ const props = defineProps({
 const emailReadOnly = ref(true);
 const options = ref(jsonOptions);
 
-const selectedCareer = ref({ id: 1, name: "Software Engineering" });
 
-const saveEmail = () => {
-  // Update email calling API
-};
+
 </script>
-      <!-- <style scoped>
-    .student-name {
-      color: #4436fd;
-      font-feature-settings: "clig" off, "liga" off;
-      font-family: Montserrat;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-    
-    .student-text {
-      color: #6e6b7b;
-      font-family: Montserrat;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-transform: capitalize;
-    }
-    
-    .student-avatar {
-      border: 3px solid #91cc75;
-      border-radius: 100%;
-    }
-    </style>
-           -->
+   
