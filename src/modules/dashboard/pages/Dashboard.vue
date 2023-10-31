@@ -2,27 +2,7 @@
   <q-page class="bg-grey-2 flex q-pr-md q-py-md">
     <div class="row items-stretch full-width q-col-gutter-md">
       <div class="col-12 col-md-3">
-        <!-- DESKTOP -->
-        <q-scroll-area
-          v-if="$q.screen.gt.md"
-          style="height: 100%"
-          :thumb-style="thumbStyle"
-          :bar-style="barStyle"
-        >
-          <StudentCardProfile :data="data.student" class="q-mb-md" />
-          <StudentCardAboutResume :data="data.student" class="q-my-md" />
-          <StudentCardAbout :data="data.student" class="q-my-md" />
-          <StudentCardCareerDetails :data="data.student" class="q-my-md" />
-          <WidgetsCard :data="data.student" class="q-my-md" />
-        </q-scroll-area>
-        <!-- MOBILE -->
-        <template v-else>
-          <StudentCardProfile :data="data.student" class="q-mb-md" />
-          <StudentCardAboutResume :data="data.student" class="q-my-md" />
-          <StudentCardAbout :data="data.student" class="q-my-md" />
-          <StudentCardCareerDetails :data="data.student" class="q-my-md" />
-          <WidgetsCard :data="data.student" class="q-my-md" />
-        </template>
+       <StudentDetails :data="data"/>
       </div>
 
       <div class="col-12 col-md-9">
@@ -37,12 +17,8 @@
   
 <script setup>
 import { ref, onMounted } from "vue";
-import { useStore } from "vuex";
-import StudentCardProfile from "../components/studentDetails/StudentCardProfile.vue";
-import StudentCardAboutResume from "../components/studentDetails/StudentCardAboutResume.vue";
-import StudentCardAbout from "../components/studentDetails/StudentCardAbout.vue";
-import StudentCardCareerDetails from "../components/studentDetails/StudentCardCareerDetails.vue";
-import WidgetsCard from "../components/studentDetails/WidgetsCard.vue";
+
+import StudentDetails from "../components/studentDetails/StudentDetails.vue";
 import Breadcrumb from "../../../components/Breadcrumb.vue";
 import RecordDetails from "../components/recordDetails/RecordDetails.vue";
 
@@ -52,20 +28,6 @@ const data = ref(json); // recuperable via actions si estuviera la API disponibl
 
 const breadcrumbText = ref("Record Details / " + data.value.student.profile.id);
 
-const thumbStyle = {
-  right: "0px",
-  backgroundColor: "#6e6b7b",
-  width: "5px",
-  opacity: 0.4,
-};
-
-const barStyle = {
-  right: "2px",
-
-  backgroundColor: "#6e6b7b",
-  width: "9px",
-  opacity: 0.0,
-};
 
 onMounted(() => {
   // dispatch de action para obtener datos si hubiera llamado a API

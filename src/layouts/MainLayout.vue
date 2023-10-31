@@ -62,7 +62,7 @@
     >
       <q-scroll-area class="fit">
         <q-list>
-          <MenuItems v-for="item in navItems" v-bind:key="item" />
+          <MenuItems v-for="link in navItems" :key="link.title" v-bind="link" />
         </q-list>
       </q-scroll-area>
     </q-drawer>
@@ -89,7 +89,7 @@ import { useStore } from "vuex";
 const store = useStore()
 
 
-const drawer = ref(true);
+const drawer = ref(false);
 const miniState = ref(true);
 const navItems = [
   {

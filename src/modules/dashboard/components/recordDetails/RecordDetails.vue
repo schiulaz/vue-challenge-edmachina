@@ -37,7 +37,60 @@
     class="bg-grey-2"
   >
     <q-tab-panel name="overview" class="q-px-none">
-      <OverviewStatsCards :data="stats" />
+      <div :class="`${$q.screen.gt.sm ? 'row wrap' : ''}  q-gutter-md`">
+        <StatsCard :data="stats" :icon="'today'">
+          <template v-slot:headerTitle>Record Age</template>
+          <template v-slot:headerValue>{{ stats.recordAge.value }}</template>
+          <template v-slot:footerContent>
+            <span class="q-mr-sm">Created on</span>
+            <span>{{
+              formatDate(stats.recordAge.created, "MMM DD, YYYY")
+            }}</span>
+          </template>
+        </StatsCard>
+        <StatsCard :data="stats" :icon="'check_circle'">
+          <template v-slot:headerTitle>Status</template>
+          <template v-slot:headerValue>{{ stats.status.value }}</template>
+          <template v-slot:footerContent>
+            <span class="q-mr-sm">Updated</span>
+            <span>{{ formatDate(stats.status.created, "MMM DD, YYYY") }}</span>
+          </template>
+        </StatsCard>
+        <StatsCard :data="stats" :icon="'location_on'">
+          <template v-slot:headerTitle>Country</template>
+          <template v-slot:headerValue>{{ stats.country.name }}</template>
+          <template v-slot:footerContent>
+            <span class="q-mr-sm">State</span>
+            <span>{{ stats.country.state }}</span>
+          </template>
+        </StatsCard>
+        <StatsCard :data="stats" :icon="'contact_page'">
+          <template v-slot:headerTitle>Last Contact</template>
+          <template v-slot:headerValue
+            >{{ calculateDiff(stats.lastContact.created) }} days ago</template
+          >
+          <template v-slot:footerContent>
+            <span>{{
+              formatDate(stats.lastContact.created, "MMM DD, YYYY")
+            }}</span
+            ><span>{{ formatDate(stats.lastContact.created, "hh:mm a") }}</span>
+          </template>
+        </StatsCard>
+        <StatsCard :data="stats" :icon="'timeline'">
+          <template v-slot:headerTitle>Last Activity</template>
+          <template v-slot:headerValue
+            >{{ calculateDiff(stats.lastActivity.created) }} days ago</template
+          >
+          <template v-slot:footerContent>
+            <span>{{
+              formatDate(stats.lastActivity.created, "MMM DD, YYYY")
+            }}</span
+            ><span>{{
+              formatDate(stats.lastActivity.created, "hh:mm a")
+            }}</span>
+          </template>
+        </StatsCard>
+      </div>
 
       <div><OverviewTabs /></div>
     </q-tab-panel>
@@ -60,19 +113,28 @@
   </q-tab-panels>
 </template>
    
-   <script setup>
+<script setup>
 import { ref } from "vue";
-import OverviewStatsCards from "../recordDetails/overviewTab/OverviewStatsCards.vue";
+import moment from "moment";
+import StatsCard from "src/components/StatsCard.vue";
+
 import OverviewTabs from "../recordDetails/overviewTab/OverviewTabs.vue";
 
 import json from "src/json/overviewStats.json";
 
 const props = defineProps({
-  data: Object,
+  data: { type: Object },
 });
 
 const tab = ref("overview");
 const stats = ref(json);
+
+const formatDate = (value, format) => {
+  return moment(value).format(format);
+};
+const calculateDiff = (date) => {
+  return moment().diff(date, "days");
+};
 </script>
   
   <style scoped>

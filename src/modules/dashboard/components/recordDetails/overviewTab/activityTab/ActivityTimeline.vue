@@ -57,7 +57,7 @@
 
     <q-scroll-area
       v-if="$q.screen.gt.md"
-      style="height: 500px"
+      style="height: 520px"
       :thumb-style="thumbStyle"
       :bar-style="barStyle"
       class="row items-stretch full-width"

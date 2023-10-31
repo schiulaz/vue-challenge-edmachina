@@ -9,7 +9,7 @@
           :font-size="`${$q.screen.gt.md ? '25px' : '20px'}`"
           color="accent"
           text-color="white"
-          :icon="data.icon"
+          :icon="icon"
           :class="$q.screen.gt.md ? '' : 'q-mb-md'"
         />
         <div
@@ -18,11 +18,11 @@
           } content-end q-mb-sm`"
         >
           <h6 class="card-title" style="margin-bottom: 0px">
-            {{ data.title }}
+            <slot name="headerTitle"></slot>
           </h6>
-          <span class="text-bold text-dark" style="font-size: 18px">{{
-            data.value
-          }}</span>
+          <span class="text-bold text-dark" style="font-size: 18px"
+            ><slot name="headerValue"></slot
+          ></span>
         </div>
       </div>
     </div>
@@ -32,26 +32,22 @@
         $q.screen.gt.md ? 'row justify-between' : 'text-center'
       }  card-title`"
     >
-      <span>{{ data.firsDesc }}</span
-      ><span>{{ data.secondDesc }}</span>
+      <slot name="footerContent"> </slot>
     </div>
   </q-card>
 </template>
      
 <script setup>
-
-
 const props = defineProps({
   data: {
     type: Object,
     required: true,
   },
   icon: {
-    type: Boolean,
-    default: false,
+    type: String,
+    required: true,
   },
 });
-
 </script>
     
     <style scoped>

@@ -52,7 +52,7 @@
   </q-tab-panels>
 </template>
      
-     <script setup>
+<script setup>
 import { ref } from "vue";
 import ActivityTimeline from "./activityTab/ActivityTimeline.vue";
 
@@ -61,46 +61,9 @@ const props = defineProps({
 });
 
 const tab = ref("activity");
-const stats = ref({
-  recordAge: {
-    icon: "today",
-    title: "Record Age",
-    value: "12 days",
-    firsDesc: "Created on",
-    secondDesc: "Jan 2, 2023",
-  },
-  status: {
-    icon: "check_circle",
-    title: "Status",
-    value: "Active",
-    firsDesc: "Created on",
-    secondDesc: "Jan 2, 2023",
-  },
-  country: {
-    icon: "location_on",
-    title: "Country",
-    value: "Mexico",
-    firsDesc: "State",
-    secondDesc: "Córdoba",
-  },
-  lastContact: {
-    icon: "contact_page",
-    title: "Last Contact",
-    value: "2 days ago",
-    firsDesc: "Oct 23, 2023",
-    secondDesc: "2:43pm",
-  },
-  lastActivity: {
-    icon: "timeline",
-    title: "Last activity",
-    value: "7 days ago",
-    firsDesc: "Oct 21, 2023",
-    secondDesc: "2:50px",
-  },
-});
 </script>
     
-    <style scoped>
+<style scoped>
 :deep .q-tab__label {
   font-size: 16px;
   line-height: 1.715em;
@@ -108,7 +71,4 @@ const stats = ref({
   color: inherit !important;
 }
 
-.radius-4 {
-  border-radius: 4px;
-}
 </style>
