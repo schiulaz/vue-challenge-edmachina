@@ -29,7 +29,7 @@
     <q-separator class="q-my-sm" />
     <div
       :class="`${
-        $q.screen.gt.md ? 'row justify-between' : 'text-center'
+        $q.screen.gt.md ? 'row justify-between' : 'column text-center'
       }  card-title`"
     >
       <slot name="footerContent"> </slot>
